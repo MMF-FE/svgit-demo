@@ -16,8 +16,8 @@
         "jsx": "react-jsx",
         "paths": {
             "@/*": ["src/*"],
-            "@icon/*": ["../../packages/assets/svg/*"],
-            "@fa/*": ["../../packages/assets/font-awesome/*"]
+            "@icon/*": ["../assets/svg/*"],
+            "@fa/*": ["../assets/font-awesome/*"]
         },
 
         /* Linting */

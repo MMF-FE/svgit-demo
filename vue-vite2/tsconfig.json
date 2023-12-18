@@ -15,7 +15,7 @@
         "skipLibCheck": true,
         "paths": {
             "@/*": ["src/*"],
-            "@icon/*": ["../../packages/assets/svg/*"]
+            "@icon/*": ["../assets/svg/*"]
         }
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

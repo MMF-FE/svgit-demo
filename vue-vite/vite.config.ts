@@ -10,8 +10,8 @@ const filename = (metaUrl) => fileURLToPath(metaUrl)
 const __dirname = path.dirname(filename(import.meta.url))
 
 const svgFilePath = [
-    path.join(__dirname, '../../packages/assets/svg'),
-    path.join(__dirname, '../../packages/assets/font-awesome'),
+    path.join(__dirname, '../assets/svg'),
+    path.join(__dirname, '../assets/font-awesome'),
 ]
 
 // https://vitejs.dev/config/
@@ -32,24 +32,19 @@ export default defineConfig({
         svgicon({
             include: ['**/assets/**/*.svg'],
             svgFilePath: [
-                path.join(__dirname, '../../packages/assets/svg'),
-                path.join(__dirname, '../../packages/assets/font-awesome'),
+                path.join(__dirname, '../assets/svg'),
+                path.join(__dirname, '../assets/font-awesome'),
             ],
         }),
         svgicon({
             include: ['**/assets/svg/**/*.svg'],
             matchQuery: /component/,
-            svgFilePath: path.join(__dirname, '../../packages/assets'),
+            svgFilePath: path.join(__dirname, '../assets'),
             component: 'vue',
         }),
     ],
     resolve: {
-        preserveSymlinks: true,
         alias: [
-            {
-                find: /^vue$/,
-                replacement: path.join(__dirname, 'node_modules/vue'),
-            },
             {
                 find: '@icon',
                 replacement: svgFilePath[0],

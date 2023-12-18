@@ -11,8 +11,8 @@ const __dirname = path.dirname(filename(import.meta.url))
 const srcPath = path.resolve(__dirname, './src')
 
 const svgFilePath = [
-    path.join(__dirname, '../../packages/assets/svg'),
-    path.join(__dirname, '../../packages/assets/font-awesome'),
+    path.join(__dirname, '../assets/svg'),
+    path.join(__dirname, '../assets/font-awesome'),
 ]
 
 // https://vitejs.dev/config/
@@ -46,13 +46,6 @@ export default defineConfig({
             {
                 find: '@fa',
                 replacement: svgFilePath[1],
-            },
-            {
-                find: '@yzfe/react-svgicon',
-                replacement: path.join(
-                    __dirname,
-                    'node_modules/@yzfe/react-svgicon'
-                ),
             },
         ],
     },

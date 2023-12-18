@@ -4,7 +4,7 @@ import path from 'path'
 
 import svgicon from 'vite-plugin-svgicon'
 
-const svgFilePath = [path.join(__dirname, '../../packages/assets/svg')]
+const svgFilePath = [path.join(__dirname, '../assets/svg')]
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,31 +23,20 @@ export default defineConfig({
         }),
         svgicon({
             include: ['**/assets/svg/**/*.svg'],
-            svgFilePath: path.join(__dirname, '../../packages/assets/svg'),
+            svgFilePath: path.join(__dirname, '../assets/svg'),
         }),
         svgicon({
             include: ['**/assets/svg/**/*.svg'],
             matchQuery: /component/,
             component: 'vue',
-            svgFilePath: path.join(__dirname, '../../packages/assets/svg'),
+            svgFilePath: path.join(__dirname, '../assets/svg'),
         }),
     ],
     resolve: {
         alias: [
             {
-                find: /^vue$/,
-                replacement: path.join(__dirname, 'node_modules/vue'),
-            },
-            {
                 find: '@icon',
                 replacement: svgFilePath[0],
-            },
-            {
-                find: '@yzfe/vue-svgicon',
-                replacement: path.join(
-                    __dirname,
-                    'node_modules/@yzfe/vue-svgicon'
-                ),
             },
         ],
     },
