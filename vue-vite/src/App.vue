@@ -90,7 +90,7 @@ const iconClick = () => {
             <p>Test inherit</p>
             <div class="test-inherit">
                 <img :src="VueIconUrl" width="50" height="50" alt="" />
-                <IconVue style="font-size: 100px;" />
+                <IconVue style="font-size: 100px;" color="blue red" />
                 <icon
                     ref="mask"
                     v-show="iconProps.dir === 'left'"

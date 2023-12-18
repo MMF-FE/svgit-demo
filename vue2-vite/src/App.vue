@@ -8,8 +8,8 @@ function test() {
 
 <template>
   <div>
-    <icon data="@icon/vue.svg"></icon>
-    <IconArrow width="100" height="100" color="red" @click="test" />
+    <icon data="@icon/vue.svg" color="red"></icon>
+    <IconArrow width="100" height="100" color="red" @click="test" tabindex="1" />
   </div>
 </template>
 

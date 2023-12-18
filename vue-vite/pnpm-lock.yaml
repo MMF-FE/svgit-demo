@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   '@yzfe/svgicon':
-    specifier: latest
-    version: 1.2.0
+    specifier: alpha
+    version: 1.2.1-alpha.0
   '@yzfe/svgicon-viewer':
     specifier: ^1.3.0
     version: 1.3.0
   '@yzfe/vue-svgicon':
-    specifier: latest
-    version: 5.0.0(@yzfe/svgicon@1.2.0)(vue@3.3.12)
+    specifier: alpha
+    version: 5.0.1-alpha.0(@yzfe/svgicon@1.2.1-alpha.0)(vue@3.3.12)
   vue:
     specifier: ^3.3.4
     version: 3.3.12(typescript@5.3.3)
@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^4.4.5
     version: 4.5.1(sass@1.69.5)
   vite-plugin-svgicon:
-    specifier: latest
-    version: 2.1.0(@yzfe/vue-svgicon@5.0.0)(vite@4.5.1)
+    specifier: alpha
+    version: 2.1.1-alpha.0(vite@4.5.1)
 
 packages:
 
@@ -375,6 +375,15 @@ packages:
       '@types/svgo': 2.6.4
       lodash: 4.17.21
       svgo: 2.8.0
+    dev: false
+
+  /@yzfe/svgicon-gen@1.3.1-alpha.0:
+    resolution: {integrity: sha512-zkBXHeZXftSSUu91B1typFcIeLJCH9Vftzr7e+OasTCIMa8l6FD781byqFzORz0AFmRkby/9+RQPyQJy6BQb4g==}
+    dependencies:
+      '@types/svgo': 2.6.4
+      lodash: 4.17.21
+      svgo: 2.8.0
+    dev: true
 
   /@yzfe/svgicon-viewer@1.3.0:
     resolution: {integrity: sha512-jLcamd7DVlqjZqOnvtgrSwrGOm3Sb+ugr5Zaan15f8EELv3OVIFf0fqKPhcJRaBVkkkqlBoeO8gJTypkcnDC8Q==}
@@ -391,11 +400,12 @@ packages:
       - supports-color
     dev: false
 
-  /@yzfe/svgicon@1.2.0:
-    resolution: {integrity: sha512-V1acbxDSPWcKDGZ1491jUKUCg4eK+QcvQ5nLjLr+jD/heTr1idl37saxU9a7meKYBMOTYTF1AyLu3XoFQIxgAw==}
+  /@yzfe/svgicon@1.2.1-alpha.0:
+    resolution: {integrity: sha512-b5gAbjiJuetlDfB5+kEt/l5MtclDfl0idg9pJZw7M/GHbEWBW/4Oil5ddhjeiYVuq6hlNzxh8FmWhhII2f+COQ==}
+    dev: false
 
-  /@yzfe/vue-svgicon@5.0.0(@yzfe/svgicon@1.2.0)(vue@3.3.12):
-    resolution: {integrity: sha512-zPu2rk3uja2VMu4jU0S+n/XF7+CFZf9OV+9hhqkuOb6Pfq2j2F1M+jWUrIPUdZnWOd8MeI8tRCFI68C5H7Jtcg==}
+  /@yzfe/vue-svgicon@5.0.1-alpha.0(@yzfe/svgicon@1.2.1-alpha.0)(vue@3.3.12):
+    resolution: {integrity: sha512-7HDvGLI4ouAOpvUhwNAHzHsDNyMvYiVzNToIAQ6Lgck6XG69ahirsTfIlSdpWanBvxU8jvZFeZMJ/QKI/4VdlA==}
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
@@ -405,9 +415,10 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      '@yzfe/svgicon': 1.2.0
+      '@yzfe/svgicon': 1.2.1-alpha.0
       vue: 3.3.12(typescript@5.3.3)
       vue-demi: 0.14.6(vue@3.3.12)
+    dev: false
 
   /abstract-logging@2.0.1:
     resolution: {integrity: sha512-2BjRTZxTPvheOvGbBslFSYOUkr+SjPtOnrLP33f+VIWLzezQpZcqVg7ja3L4dBXmzzgwT+a029jRx5PCi3JuiA==}
@@ -1401,21 +1412,13 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: false
 
-  /vite-plugin-svgicon@2.1.0(@yzfe/vue-svgicon@5.0.0)(vite@4.5.1):
-    resolution: {integrity: sha512-LhaiL5QyE5lnYUHVVAYLVxTn8+/TtYHpR+xGjZRFixKQ4lJhoy/vpYER3kfjncAArcww2+4KMW/LEVUbVqg8sA==}
+  /vite-plugin-svgicon@2.1.1-alpha.0(vite@4.5.1):
+    resolution: {integrity: sha512-Ft9agfdDk9r8AZcDSGd3UYTpnN1v2dbXW1vfOwZ9VEGRE7Qh4bILsf1mWtjvzxD9pRSHlIi85n51jCueZ3QIEQ==}
     peerDependencies:
-      '@yzfe/react-svgicon': '>=1.0.0'
-      '@yzfe/vue-svgicon': '>=1.0.0'
       vite: '>=2.0.0-beta.1'
-    peerDependenciesMeta:
-      '@yzfe/react-svgicon':
-        optional: true
-      '@yzfe/vue-svgicon':
-        optional: true
     dependencies:
       '@types/svgo': 2.6.4
-      '@yzfe/svgicon-gen': 1.3.0
-      '@yzfe/vue-svgicon': 5.0.0(@yzfe/svgicon@1.2.0)(vue@3.3.12)
+      '@yzfe/svgicon-gen': 1.3.1-alpha.0
       minimatch: 9.0.3
       vite: 4.5.1(sass@1.69.5)
     dev: true
@@ -1469,6 +1472,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.3.12(typescript@5.3.3)
+    dev: false
 
   /vue@3.3.12(typescript@5.3.3):
     resolution: {integrity: sha512-jYNv2QmET2OTHsFzfWHMnqgCfqL4zfo97QwofdET+GBRCHhSCHuMTTvNIgeSn0/xF3JRT5OGah6MDwUFN7MPlg==}
