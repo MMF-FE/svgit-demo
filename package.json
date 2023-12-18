@@ -1,0 +1,30 @@
+{
+    "name": "svgit-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "husky install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/eslint": "^8.37.0",
+        "@yzfe/eslint-config-ts": "^2.2.0",
+        "eslint": "^8.38.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.1",
+        "prettier": "^2.8.7",
+        "typescript": "^4.9.5"
+    },
+    "lint-staged": {
+        "*.{ts,js,tsx}": [
+            "eslint --fix --quiet"
+        ],
+        "*.json": [
+            "prettier --write"
+        ]
+    }
+}

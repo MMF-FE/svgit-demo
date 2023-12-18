@@ -47,6 +47,13 @@ export default defineConfig({
                 find: '@fa',
                 replacement: svgFilePath[1],
             },
+            {
+                find: '@yzfe/react-svgicon',
+                replacement: path.join(
+                    __dirname,
+                    'node_modules/@yzfe/react-svgicon'
+                ),
+            },
         ],
     },
 })

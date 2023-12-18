@@ -53,6 +53,13 @@ export default defineConfig({
                 find: '@fa',
                 replacement: svgFilePath[1],
             },
+            {
+                find: '@yzfe/vue-svgicon',
+                replacement: path.join(
+                    __dirname,
+                    'node_modules/@yzfe/vue-svgicon'
+                ),
+            },
         ],
     },
 })
